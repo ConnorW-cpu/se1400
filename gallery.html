@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Milestone6</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img src="TT-logo.png" alt="Tyrannical Turtles Logo">
+            <h1>Tyrannical Turtles<br>
+            15486N</h1>
+        </header>
+        <nav>
+            <ul class="flex-menu">
+                <li><a href="index.html">Home </a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="awards.html">Awards</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+
+<main>
+    <div id="hero" class="two-col">
+        <img src="Image12.jpeg" alt="Team Photo">
+        <p>
+            Take a look at some of our favorite moments from competitions, robot builds, 
+            and team experiences. These images capture the hard work, creativity, and 
+            teamwork that define the Tyrannical Turtles throughout each season.
+        </p>
+    </div>
+    <div id="gallery">
+        <div class="gallery-card">
+            <img src="Image1.jpeg" alt="Davis Duel Trophies">
+            <p>Davis Duel Trophies. We came out as tournament finalists, second in skills, and the think award.</p>
+        </div>
+        <div class="gallery-card">
+            <img src="Image2.jpeg" alt="State Quals">
+            <p>State qualification match. We brought this one to a close win.</p>
+        </div>
+        <div class="gallery-card">
+            <img src="Image3.jpeg" alt="State Finals">
+            <p>Right before F3 in state. Trying to be as friendly as possible.</p>
+        </div>
+        <div class="gallery-card">
+            <img src="Image4.jpeg" alt="Award moment">
+            <p>The moment we received the banner after winning State. Big moment for our team.</p>
+        </div>
+        <div class="gallery-card">
+            <img src="Image5.jpeg" alt="Shaavi Trophy">
+            <p>Our friend Shaavi holding our trophy.</p>
+        </div>
+        <div class="gallery-card">
+            <img src="Image6.jpeg" alt="Team celebration">
+            <p>Our orginization ended up winning 3 of the 4 possible tournament champions for Middle School and High School.</p>
+        </div>
+                <div class="gallery-card">
+            <img src="Image7.jpeg" alt="Local Competition">
+            <p>Small local competition. We didn't do well in this tournament and only got Judges Award.</p>
+        </div>
+        <div class="gallery-card">
+            <img src="Image8.jpeg" alt="State Trophies">
+            <p>Triple crowning state in Middle School.</p>
+        </div>
+        <div class="gallery-card">
+            <img src="Image9.jpeg" alt="Robot Hang">
+            <p>First attempt at building a hang in High Stakes.</p>
+        </div>
+        <div class="gallery-card">
+            <img src="Image10.jpeg" alt="Worlds Robot">
+            <p>Our Worlds robot we made. It ended up snapping in half... </p>
+        </div>
+            <div class="gallery-card">
+            <img src="Image11.jpeg" alt="Push Back First Robot">
+            <p>Our first robot in Push Back.</p>
+        </div>
+        <div class="gallery-card">
+            <img src="Image12.jpeg" alt="Team celebration">
+            <p>We won Tournament Champion and Skills in this local competition.</p>
+        </div>
+    </div>
+</main>
+        <footer>
+            <h5 style="display: inline">&copy; Copyright 2024 Tyrannical Turtles</h5>
+           <a href="https://www.instagram.com/15486n_tyrannical_turtles" target="_blank" id="Insta-link"><img src="Insta-Logo.jpg" alt="Instagram Logo" id="Insta" ></a>
+           <a href="https://www.youtube.com/@TyrannicalTurtles15486n" target="_blank" id="YT-link"><img src="YT-Logo.webp" alt="YouTube Logo" id="YT" ></a>
+        </footer>
+    </div>
+    <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <p id="lightbox-caption"></p>
+</div>
+<script>
+const galleryImages = document.querySelectorAll(".gallery-card img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const caption = document.getElementById("lightbox-caption");
+const closeBtn = document.querySelector(".close");
+
+galleryImages.forEach(img => {
+    img.addEventListener("click", () => {
+        lightbox.style.display = "block";
+        lightboxImg.src = img.src;
+        caption.textContent = img.nextElementSibling.textContent;
+    });
+});
+
+closeBtn.onclick = () => {
+    lightbox.style.display = "none";
+};
+
+lightbox.onclick = (e) => {
+    if (e.target !== lightboxImg) {
+        lightbox.style.display = "none";
+    }
+};
+</script>
+</body>
+</html>
